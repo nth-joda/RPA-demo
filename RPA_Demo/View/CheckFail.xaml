@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="RPA_Demo.View.CheckFail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPA_Demo.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="580" d:DesignWidth="905">
+    <Grid Name="CheckFails">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="905" />
+        </Grid.ColumnDefinitions>
+        <Border Background="#fceded"
+                CornerRadius="5"
+                Margin="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="/Images/logo.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="130"/>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Uh-oh, seem like there are something wrong" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#c93a3a"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="Please check it twice and try again." FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#c93a3a"></TextBlock>
+                </Grid>
+                <Border Grid.Row="2" Width="200" Height="80" CornerRadius="10" Background="#c93a3a">
+                    <Button Margin="3" Name="btn1" FontSize="40" Background="#fceded" Foreground="#c93a3a" BorderBrush="Transparent" BorderThickness="2" MouseUp="OnConfirm">
+                        Confirm
+                    </Button>
+                </Border>
+                
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
